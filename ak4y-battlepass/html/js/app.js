@@ -429,16 +429,10 @@ $(document).on("keydown", function () {
     }
 });
 
-var elements = document.getElementById("scollItemList");
-var premiumElements = document.getElementById("premiumItemList");
-
-elements.addEventListener("wheel", (event) => {
+var rewardBarsScroll = document.getElementById("rewardBarsScroll");
+rewardBarsScroll.addEventListener("wheel", (event) => {
     event.preventDefault();
-    elements.scrollBy({ left: event.deltaY < 0 ? -40 : 40 });
-});
-
-elements.addEventListener("scroll", () => {
-    premiumElements.scrollLeft = elements.scrollLeft;
+    rewardBarsScroll.scrollBy({ left: event.deltaY < 0 ? -40 : 40 });
 });
 
 $(document).on("click", ".buyPremiumButton", function () {

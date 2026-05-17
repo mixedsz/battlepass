@@ -484,47 +484,56 @@ body {
 
 .bpRowLabel {
     position: absolute;
-    left: 150px;
+    left: calc(-9rem + 75px);
     font-family: Acrom;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #c7c7c7;
+    z-index: 2;
 }
 
 .standardRowLabel {
-    top: 12.7rem;
+    top: 12.5rem;
 }
 
 .premiumRowLabel {
-    top: 24rem;
+    top: 22.3rem;
     color: #f8ca48;
     text-shadow: 0px 0px 8px rgba(248, 202, 72, 0.5);
 }
 
-.premiumBattlePassItemsArea {
+/* Single scrollable wrapper for both reward rows */
+.rewardBarsWrapper {
     position: absolute;
     left: -9rem;
-    top: 24.8rem;
+    top: 13rem;
     width: 1650px;
-    height: 10rem;
+    height: 22rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.rewardBarsInner {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    min-width: 100%;
 }
 
 .BPPremiumItemArea {
     margin-left: 75px;
     display: flex;
-    width: 1375px;
-    height: 10rem;
-    overflow-x: hidden;
+    margin-top: 2.5rem;
 }
 
 .battlePassNotPremiumItemBlur {
     position: absolute;
-    top: 23.8rem;
+    top: 22rem;
     left: -9rem;
     z-index: 90;
     width: 1650px;
-    height: 150px;
+    height: 180px;
     backdrop-filter: blur(3px);
     display: flex;
     align-items: center;
@@ -585,13 +594,7 @@ body {
     background: #f8c94800;
 }
 
-.battlePassItemsArea {
-    position: absolute;
-    left: -9rem;
-    top: 13.5rem;
-    width: 1650px;
-    height: 12rem;
-}
+/* battlePassItemsArea removed — replaced by .rewardBarsWrapper */
 
 
 .currentLevelContainer {
@@ -639,16 +642,7 @@ body {
 
 .BPItemArea {
     margin-left: 75px;
-    /* padding-bottom: 10px; */
-    /* position: absolute; */
     display: flex;
-    /* flex-direction: row; */
-    width: 1375px;
-    height: 18rem;
-    /* overflow: visible; */
-    overflow-x: auto;
-    /* overflow-y: hidden; */
-    /* background-color: green; */
 }
 
 .bpLevelItem {
@@ -875,7 +869,7 @@ body {
     width: 95%;
     margin-left: 3%;
     position: absolute;
-    top: 53rem;
+    top: 51rem;
 }
 
 .bottomTaskTextArea {
@@ -1461,20 +1455,11 @@ body {
     .levelRect {
         width: 760px;
     }
-    .battlePassItemsArea {
+    .rewardBarsWrapper {
         width: 860px;
-    }
-    .BPItemArea {
-        width: 750px;
-    }
-    .premiumBattlePassItemsArea {
-        width: 860px;
-    }
-    .BPPremiumItemArea {
-        width: 750px;
     }
     .bottomBpTaskSection {
-        top: 51rem;
+        top: 50rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
@@ -1524,20 +1509,11 @@ body {
     .levelRect {
         width: 715px;
     }
-    .battlePassItemsArea {
+    .rewardBarsWrapper {
         width: 760px;
-    }
-    .BPItemArea {
-        width: 700px;
-    }
-    .premiumBattlePassItemsArea {
-        width: 760px;
-    }
-    .BPPremiumItemArea {
-        width: 700px;
     }
     .bottomBpTaskSection {
-        top: 51rem;
+        top: 50rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
@@ -1585,20 +1561,11 @@ body {
     .levelRect {
         width: 715px;
     }
-    .battlePassItemsArea {
+    .rewardBarsWrapper {
         width: 760px;
-    }
-    .BPItemArea {
-        width: 700px;
-    }
-    .premiumBattlePassItemsArea {
-        width: 760px;
-    }
-    .BPPremiumItemArea {
-        width: 700px;
     }
     .bottomBpTaskSection {
-        top: 44rem;
+        top: 43rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
@@ -1615,9 +1582,6 @@ body {
     }
     .battlePassNotPremiumItemBlur {
         width: 760px;
-    }
-    .buyPremiumButton {
-        margin-top: 0;
     }
 }
 
@@ -1649,20 +1613,11 @@ body {
     .levelRect {
         width: 545px;
     }
-    .battlePassItemsArea {
+    .rewardBarsWrapper {
         width: 760px;
-    }
-    .BPItemArea {
-        width: 535px;
-    }
-    .premiumBattlePassItemsArea {
-        width: 760px;
-    }
-    .BPPremiumItemArea {
-        width: 535px;
     }
     .bottomBpTaskSection {
-        top: 44rem;
+        top: 43rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
@@ -1679,9 +1634,6 @@ body {
     }
     .battlePassNotPremiumItemBlur {
         width: 760px;
-    }
-    .buyPremiumButton {
-        margin-top: 0;
     }
 }
 
