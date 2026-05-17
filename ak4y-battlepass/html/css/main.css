@@ -1,0 +1,1808 @@
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    /* z-index: 999; */
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.generalContainer {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* background: url("/html/images/cropped-1920-1080-5875361.png");
+    background-size: cover; */
+    background-color: rgba(40, 40, 40, 0.85);
+}
+
+.topSection {
+    position: absolute;
+    display: flex;
+    /* background-color: red; */
+    width: 100%;
+    top: 3rem;
+    height: 4rem;
+}
+
+@font-face {
+    font-family: 'Haettenschweiler';
+    src: url('Haettenschweiler.ttf') format('truetype');
+}
+
+.topText {
+    display: flex;
+    font-family: 'Haettenschweiler', sans-serif;
+    text-transform: uppercase;
+    /* line-height: 4rem;
+    font-weight: 700; */
+    font-size: 95px;
+    margin-left: 4rem;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.topText span {
+    margin-left: 0.8rem;
+    color: #cf9300;
+
+    text-shadow: 0px 0px 19px rgba(207, 147, 0, 0.34);
+}
+
+.rectangleTop {
+    height: 2px;
+    width: 80rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+#rotateIcon {
+    font-size: 20px;
+    margin-top: 1.3rem;
+    color: #cf9300;
+    margin-left: 1.5rem;
+}
+
+.endTimeAreaTop {
+    /* background-color: rgba(255, 0, 0, 0.083); */
+    width: 6rem;
+    height: 2.5rem;
+    margin-top: 0.9rem;
+    margin-left: 1rem;
+}
+
+.endTimeText {
+    color: #b7b7b7;
+    font-family: Zabal;
+    font-size: 11px;
+}
+
+.endTimeFlex {
+    display: flex;
+}
+
+.endTimeFlex {
+    color: white;
+}
+
+.endTimeFlex {
+    font-size: 14px;
+}
+
+.endTimeFlex span {
+    font-family: Acrom;
+}
+
+.endTimeFlex p {
+    line-height: 15px;
+    font-family: Inter;
+    margin-right: 4px;
+}
+
+/* ! TOP END */
+
+.leftImageSection {
+    z-index: 5;
+    position: absolute;
+    top: 10rem;
+    /* background-color: red; */
+    /* margin-top: 20rem; */
+    width: 524px;
+    height: 631px;
+}
+
+.leftImageSection img {
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ! IMAGE END */
+
+.middleAndRightArea {
+    /* background-color: rgba(255, 0, 0, 0.104); */
+    position: absolute;
+    top: 15rem;
+    width: 1724px;
+    height: 800px;
+    left: 8.5rem;
+}
+
+.profilInfos {
+    margin-top: 1.5rem;
+    width: 364px;
+    height: 110px;
+    border: 1px solid #cf9300;
+    box-shadow: 0px 0px 35px rgba(255, 138, 138, 0.22);
+    background: radial-gradient(105.91% 105.91% at 50% 100%, rgba(255, 123, 123, 0.18) 0%, rgba(0, 0, 0, 0) 100%), rgba(255, 138, 138, 0.15);
+    border-radius: 10px;
+}
+
+.profilInfos.premiumProfilInfos {
+    background: radial-gradient(105.91% 105.91% at 50% 100%, rgba(248, 202, 72, 0.13) 0%, rgba(0, 0, 0, 0) 100%), rgba(248, 202, 72, 0.08);
+    border: 1px solid rgba(248, 202, 72, 0.37);
+    box-shadow: 0px 0px 35px rgba(248, 202, 72, 0.2);
+    border-radius: 10px;
+}
+
+.infoImgArea {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    /* background-color: #d9d9d9; */
+    border-radius: 15px;
+    margin-left: 1.5rem;
+    margin-top: 2.3rem;
+    overflow: hidden;
+}
+
+.infoImgArea img {
+    height: 100%;
+    width: 100%;
+}
+
+.playerNameArea {
+    position: absolute;
+    display: flex;
+    margin-left: 4.4rem;
+    margin-top: 3rem;
+    /* background-color: red; */
+    width: 6rem;
+    height: 2.5rem;
+    font-family: Rubik Light;
+    font-size: 13px;
+    color: #bdbdbd;
+}
+
+#playerName {
+    margin-right: 3px;
+    font-family: Rubik;
+}
+
+.accountTypeArea {
+    display: flex;
+    justify-content: end;
+    /* background-color: rgba(255, 0, 0, 0.141); */
+    position: absolute;
+    text-align: end;
+    height: 2rem;
+    margin-left: 11rem;
+    margin-top: 2.7rem;
+    text-align: center;
+    width: 10.5rem;
+}
+
+.textAccountType {
+    color: #8f8f8f;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.accountTypeReal {
+    color: #8f8f8f;
+    margin-left: 3px;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.accountTypeReal.premiumActive {
+    color: #f8ca48;
+    margin-left: 3px;
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.premiumTaskArea {
+    /* background-color: blue; */
+    margin-top: 1rem;
+    width: 364px;
+    height: 310px;
+    /* padding-right: 1vw; */
+}
+
+#premiumCodeTitle2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.premiumAreaText {
+    display: flex;
+    color: #d8d8d8;
+    position: absolute;
+    margin-top: 1rem;
+    font-size: 13px;
+    font-style: normal;
+    font-family: Acrom;
+    text-transform: uppercase;
+}
+
+.premiumAreaText span {
+    line-height: 15px;
+    color: #f8ca48;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: Inter;
+}
+
+.premiumAreaText p {
+    font-size: 9px;
+    line-height: 15px;
+    color: #f8ca48;
+    margin-left: 3px;
+    margin-right: 3px;
+    font-family: Inter;
+}
+
+.premiumTasks {
+    /* background-color: rgba(0, 0, 255, 0.112); */
+    overflow-y: auto;
+    height: 18rem;
+    margin-top: 3rem;
+    position: absolute;
+    width: 375px;
+    /* padding-right: 3vw; */
+}
+
+.premiumTaskItem {
+    width: 364px;
+    height: 75px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.52)) padding-box,
+        linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.premiumTaskItem:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.premiumFlexArea {
+    display: flex;
+}
+
+.premiumTaskLeftArea {
+    /* background-color: rgba(255, 0, 0, 0.139); */
+    margin-left: 0.7rem;
+    margin-top: 0.7rem;
+    width: 15.8rem;
+    height: 3.2rem;
+}
+
+.premiumTaskRightArea {
+    margin-left: 0.2rem;
+    margin-top: 0.5rem;
+    width: 5.8rem;
+    height: 4rem;
+    /* background-color: rgba(255, 0, 0, 0.071); */
+}
+
+.premiumLeftTaskInfoArea {
+    font-size: 12px;
+    display: flex;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Inter;
+}
+
+.premiumLeftTaskInfoArea span {
+    color: #f8ca48;
+    margin-left: 0.1rem;
+    margin-right: 0.3rem;
+}
+
+.premiumLeftTaskDescription {
+    /* background-color: red; */
+    font-family: Zabal;
+    margin-top: 0.1rem;
+    color: #a7a7a7;
+    /* width: 1rem; */
+    height: 2rem;
+    overflow-y: auto;
+    font-size: 11px;
+}
+
+.premiumLeftTaskDescription::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 0px;
+    height: 0px;
+}
+
+.levelTextSection {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    left: 21rem;
+    top: 9.1rem;
+    /* background-color: blue; */
+    width: 920px;
+    height: 20px;
+}
+
+.levelExperienceSection {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Inter;
+    font-size: 11px;
+    color: #aaaaaa;
+    top: 10.45rem;
+    /* background-color: red; */
+    height: 1rem;
+    width: 920px;
+    left: 20.5rem;
+}
+
+.currentXPText {
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    margin-right: 2px;
+}
+
+.levelExperienceSection span {
+    color: white;
+    margin-right: 1px;
+}
+
+.levelText {
+    text-transform: capitalize;
+    font-family: Acrom;
+    margin-right: 3px;
+    color: #bdbdbd;
+}
+
+.myLevel {
+    color: #cf9300;
+    font-family: Zabal Bold;
+    margin-right: 1px;
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.maxLevel {
+    font-family: Zabal;
+    font-size: 13px;
+    margin-left: 1px;
+    line-height: 20px;
+    color: #bdbdbd;
+}
+
+.levelTextSection span {
+    color: #bdbdbd;
+    font-size: 13px;
+
+    font-family: Acrom;
+    line-height: 21px;
+}
+
+.levelRect {
+    position: absolute;
+    left: -3.75rem;
+    top: 11.5rem;
+    width: 1350px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.64);
+    border-radius: 52px;
+    overflow: hidden;
+}
+
+.levelRectFill {
+    background: #cf9300;
+    border-radius: 52px;
+    margin-top: 6px;
+    margin-left: 6px;
+    min-width: 1%;
+    max-width: 98.5%;
+    height: 8px;
+    transform-origin: width;
+    transition-duration: 0.4s;
+}
+
+#levelFill {
+    width: 30%;
+}
+
+.battlePassNotPremiumItemBlur {
+    position: absolute;
+    top: 17rem;
+    left: 28.15rem;
+    z-index: 90;
+    width: 54.5rem;
+    height: 190px;
+    backdrop-filter: blur(2px);
+}
+
+.battlePasNotPremiumTaskBlur {
+    position: absolute;
+    width: 23.5rem;
+    left: -0.5rem;
+    height: 18rem;
+    /* background-color: red; */
+    z-index: 90;
+
+    backdrop-filter: blur(2px);
+
+    top: 12rem;
+}
+
+#taskPremiumBuyButton {
+    margin-top: 7rem;
+    background: #cf990500;
+    backdrop-filter: blur(27px);
+}
+
+#keyIcons {
+    /* background: #fff; */
+    color: white;
+    font-size: 30px;
+    line-height: 45px;
+    /* background: #cf990500; */
+}
+
+.buyPremiumButton {
+    filter: drop-shadow(0px 0px 5px #000000);
+    backdrop-filter: blur(27px);
+    margin: auto;
+    /* box-shadow: 0px 0px 19px hsla(44, 93%, 63%, 0.4); */
+    margin-top: 7.5%;
+    font-family: Zabal Bold;
+    font-size: 20px;
+    /* gap: 10; */
+    border-radius: 5px;
+    line-height: 46px;
+    width: fit-content;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 46px;
+    cursor: pointer;
+
+    color: black;
+    background: #f8ca48;
+    border: 1px solid rgba(255, 255, 255, 0.49);
+    transform-origin: background;
+    transition-duration: 0.1s;
+}
+
+.buyPremiumButton:hover {
+    border: 2px solid #f8ca48;
+    color: white;
+    background: #f8c94800;
+}
+
+.battlePassItemsArea {
+    position: absolute;
+    left: -9rem;
+    top: 13.5rem;
+    width: 1650px;
+    height: 12rem;
+}
+
+
+.currentLevelContainer {
+    position: absolute;
+    right: 4.5vw; /* Move this to the left as needed */
+    top: -15vh;
+    display: flex;
+    align-items: center;
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+}
+
+
+#prestigeImage {
+    display: none;
+    width: 400px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    margin-right: 20px; /* Adjust spacing as needed */
+}
+
+#prestigeImage.visible {
+    position: absolute;
+    top: 4.5vh;
+    left: -16.5vw;
+    display: block;
+}
+
+.currentLevel {
+    font-family: 'Haettenschweiler', sans-serif;
+    font-size: 335px;
+    color: white;
+    text-align: center;
+}
+
+.currentLevel.prestige {
+    font-size: 40px; /* Adjust size as needed */
+    position: absolute;
+    left: 0vw;
+    top: 30.5vh;
+}
+.currentLevel.prestige-visible {
+    margin-right: 10px; /* Adjust spacing to move level closer to the prestige image */
+}
+
+
+.BPItemArea {
+    margin-left: 75px;
+    /* padding-bottom: 10px; */
+    /* position: absolute; */
+    display: flex;
+    /* flex-direction: row; */
+    width: 1375px;
+    height: 18rem;
+    /* overflow: visible; */
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+    /* background-color: green; */
+}
+
+.bpLevelItem {
+    /* background-color: rgba(255, 0, 0, 0.1); */
+}
+
+.bpLevelItem:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+*::-webkit-scrollbar {
+    /* padding-left: 75px; */
+    width: 2px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+*::-webkit-scrollbar-thumb {
+    height: 6px;
+    border-radius: 4px;
+    background: #a5a5a4;
+}
+
+.BPItemLevelArea {
+    display: flex;
+    /* background-color: rgba(81, 255, 0, 0.02); */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    /* margin-left: 0.5rem;
+    margin-right: 0.5rem; */
+}
+
+.bplevelrect {
+    height: 3px;
+    width: 2.5rem;
+    background: rgba(123, 123, 123, 0.47);
+    border-radius: 2px;
+    margin: auto;
+}
+
+.bpItemLevel {
+    font-size: 15px;
+    font-family: Acrom;
+    color: #ffffff;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.4);
+}
+
+#bpItemLevelOK {
+    color: #ff7b7b;
+    text-shadow: 0px 0px 7px rgba(123, 187, 255, 0.5);
+}
+
+.bpItemRewardBoxes {
+    /* display: flex; */
+}
+
+.bpItemBoxStandart {
+    position: relative;
+    margin-top: 0.5rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.52)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    width: 150px;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.itemCollectedTextStandart {
+    line-height: 155px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Zabal Bold;
+    color: rgba(255, 255, 255, 0.43);
+    text-transform: uppercase;
+}
+
+.itemCollectedTextPremiumx {
+    line-height: 182px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Zabal Bold;
+    color: rgba(255, 255, 255, 0.43);
+    text-transform: uppercase;
+}
+
+.bpItemBoxStandart:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.bpItemBoxStandart.canTake {
+    cursor: pointer;
+}
+
+.bpItemBoxPremium {
+    position: relative;
+    margin-top: 0.5rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.52)) padding-box,
+        linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    width: 150px;
+    border-radius: 10px;
+
+    height: 177px;
+}
+
+.bpItemBoxPremium.canTake {
+    cursor: pointer;
+}
+
+#levelOkayStandart {
+    border: 1px solid rgba(138, 228, 255, 0.5);
+}
+
+#levelOkayPremium {
+    border: 1px solid #f8ca48;
+    box-shadow: 0px 0px 40px rgba(248, 202, 72, 0.2);
+    /* color: #f3b446; */
+    /* text-shadow: 0px 0px 8px rgba(243, 180, 70, 0.78); */
+}
+
+.BPItemItemName {
+    /* background-color: RED; */
+    text-align: center;
+    font-size: 12px;
+    color: #cbcbcb;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    font-family: Acrom;
+    margin-top: 0.7rem;
+}
+
+.BPItemImageSection {
+    /* background-color: rgba(255, 0, 0, 0.113); */
+    margin-top: 0.5rem;
+    width: 100px;
+    height: 75px;
+    margin-left: 1.4rem;
+}
+
+.BPItemImageSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.BPItemPrice {
+    text-align: center;
+    margin-top: 0.6rem;
+    font-family: Zabal;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#BPPriceStandartOK {
+    color: #f3b446;
+    text-shadow: 0px 0px 8px rgba(243, 180, 70, 0.78);
+}
+
+/* ! PREMÄ°UM */
+.BPItemItemNamePremium {
+    /* background-color: RED; */
+    text-align: center;
+    font-size: 12px;
+    color: #cbcbcb;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    font-family: Acrom;
+    margin-top: 1rem;
+}
+
+.BPItemImageSectionPremium {
+    /* background-color: rgba(255, 0, 0, 0.113); */
+    margin-top: 1rem;
+    width: 100px;
+    height: 75px;
+    margin-left: 1.4rem;
+}
+
+.BPItemImageSectionPremium img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.BPItemPricePremium {
+    text-align: center;
+    margin-top: 1rem;
+    font-family: Zabal;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#BPPricePremiumOK {
+    color: #f3b446;
+    text-shadow: 0px 0px 8px rgba(243, 180, 70, 0.78);
+}
+
+.premiumTextxx {
+    color: #f3b446d8;
+    text-shadow: 0px 0px 8px rgba(243, 180, 70, 0.78);
+    font-family: Acrom;
+    left: 24.5rem;
+    top: 22.1rem;
+    font-size: 20px;
+    position: absolute;
+    rotate: 270deg;
+}
+
+.standartTextxx {
+    position: absolute;
+    left: 25rem;
+    font-family: Inter;
+    top: 10rem;
+    color: #a6a6a6;
+    rotate: -90deg;
+}
+
+/* ! BOTTOM AREA */
+
+.bottomBpTaskSection {
+    z-index: 1;
+    /* background-color: rgba(255, 0, 0, 0.05); */
+    height: 17rem;
+    width: 95%;
+    margin-left: 3%;
+    position: absolute;
+    top: 47rem;
+}
+
+.bottomTaskTextArea {
+    display: flex;
+}
+
+.bottomTaskText {
+    /* letter-spacing: 0.035em; */
+    text-transform: uppercase;
+    font-family: Acrom;
+    font-size: 19px;
+    color: #c7c7c7;
+}
+
+.bottomTextRectangle {
+    z-index: 1;
+    height: 2px;
+    width: 90.3%;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+    background: rgba(82, 82, 82, 0.1);
+    border-radius: 8px;
+}
+
+.resetDailyTaskText {
+    margin-left: 1rem;
+    margin-top: 0.35rem;
+    text-transform: uppercase;
+    font-family: Acrom;
+    font-size: 11px;
+    color: #c7c7c7;
+}
+
+.bottomTaskItemList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    width: 115rem;
+    height: 14.5rem;
+    overflow: auto;
+}
+
+.bottomTaskItem {
+    width: 440px;
+    height: 105px;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.4)) padding-box,
+        linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) border-box;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomTaskLeftArea {
+    /* background-color: rgba(255, 0, 0, 0.163); */
+    width: 19.5rem;
+    height: 4.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.bottomTaskLeftTop {
+    display: flex;
+    font-family: Acrom;
+    text-transform: uppercase;
+}
+
+.bottomTaskId {
+    color: #cf9300;
+    font-size: 17px;
+    margin-right: 0.3rem;
+}
+
+.bottomTaskName {
+    color: #fff;
+    font-family: Inter;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.bottomItemDescArea {
+    margin-top: 0.1rem;
+    overflow: hidden;
+    color: #a7a7a7;
+    font-size: 11px;
+    font-family: Inter;
+}
+
+.bottomTaskRightArea {
+    /* background-color: rgba(255, 0, 0, 0.045); */
+    width: 1rem;
+    /* height: 1rem; */
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
+    width: 6rem;
+    height: 5.5rem;
+}
+
+.inBottomFlex {
+    display: flex;
+}
+
+.bottomReward {
+    margin-top: 0.5rem;
+    justify-content: center;
+    color: #9f9f9f;
+    font-size: 10px;
+    font-family: TT Norms;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.bottomReward span {
+    color: rgba(138, 183, 255, 0.5);
+    line-height: 12px;
+    margin-left: 2px;
+}
+.bottomReward p {
+    color: white;
+    font-size: 8px;
+    /* font-family: Rubik Light; */
+    line-height: 13.5px;
+    margin-left: 1px;
+}
+
+.bottomRadialArea {
+    /* background-color: blue; */
+    width: 6rem;
+    height: 4rem;
+}
+
+#taskBarProgressID-1 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-2 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-3 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-4 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-5 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-6 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+#taskBarProgressID-7 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-8 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-9 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-10 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-11 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-12 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-13 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-14 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-15 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-16 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-17 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+#taskBarProgressID-18 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-19 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-20 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-21 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-22 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-23 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-24 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-25 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-26 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-27 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-28 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-29 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-30 {
+    width: 3.7rem;
+    margin-left: 1rem;
+    height: 3.7rem;
+}
+
+#taskBarProgressID-31 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-32 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-33 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-34 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-35 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-36 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-37 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-38 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-39 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-40 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-41 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-42 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-43 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-44 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-45 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+#taskBarProgressID-46 {
+    width: 2.8rem;
+    justify-content: center;
+    margin-left: 1.5rem;
+    height: 2.8rem;
+}
+
+.rewardPremiumText {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.4rem;
+    /* background-color: red; */
+    text-align: center;
+    color: #a7a7a7;
+    font-size: 9px;
+    font-family: Inter;
+}
+
+.rewardPremiumText span {
+    color: #f8ca48;
+}
+
+.rewardPremiumText p {
+    color: #ffffff;
+}
+
+.radialText {
+    font-family: Zabal Bold;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+.radialTextPremium {
+    font-family: Zabal Bold;
+    font-size: 9px;
+    color: #ffffff;
+}
+
+.redeemCodeGeneral {
+    display: none;
+    position: absolute;
+    z-index: 8912711138912;
+    background-color: hsla(0, 0%, 85%, 0.02);
+    height: 100%;
+    width: 100%;
+}
+
+.redeemCodeSection {
+    position: absolute;
+    z-index: 789798;
+    height: 150px;
+    width: 550px;
+    left: 50%;
+    top: 50%;
+    margin-left: -275px;
+    margin-top: -150px;
+
+    background: radial-gradient(105.91% 105.91% at 50% 100%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%), rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(248, 202, 72, 0.4);
+    box-shadow: 0px 0px 35px rgba(248, 202, 72, 0.2);
+    border-radius: 10px;
+}
+
+.premiumCodeText {
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    font-family: Acrom;
+    color: #ffffff;
+}
+
+.premiumCodeText span {
+    color: #f8ca48;
+}
+
+.redeemCodeInput {
+    width: 23rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(252, 252, 252, 0.1);
+    color: rgba(255, 255, 255, 0.597);
+    font-family: Zabal;
+    font-size: 10px;
+    padding-left: 1rem;
+}
+
+.redeemCodeInputArea {
+    display: flex;
+    /* background-color: rgba(255, 0, 0, 0.085); */
+    width: 32rem;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.acceptButtonRedeemCode {
+    border: 1px solid #f8ca48;
+    color: white;
+    line-height: 2.7rem;
+    text-align: center;
+    font-family: Zabal Bold;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-left: 0.7rem;
+    height: 100%;
+    width: 8.1rem;
+
+    cursor: pointer;
+}
+
+.acceptButtonRedeemCode:hover {
+    border: 2px solid #f8ca48;
+    background: #f8ca48;
+    color: black;
+}
+
+.inputInfoArea {
+    display: flex;
+    /* background-color: red; */
+    width: 31.5rem;
+    height: 1.5rem;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+}
+
+#infoIconRedeem {
+    color: #616161;
+    font-size: 14px;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+.redeemInfoText {
+    color: #616161;
+    font-family: Zabal;
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-left: 0.3rem;
+}
+
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .topText {
+        font-size: 30px;
+    }
+    .rectangleTop {
+        width: 70rem;
+    }
+    .leftImageSection {
+        width: 454px;
+        height: 652px;
+        left: -3rem;
+    }
+    .middleAndRightArea {
+        width: 924px;
+        /* background-color: red; */
+        left: 24rem;
+        top: 10rem;
+        height: 500px;
+    }
+    .levelTextSection {
+        width: 830px;
+    }
+    .levelExperienceSection {
+        width: 830px;
+    }
+    .levelRect {
+        width: 760px;
+    }
+    .battlePassItemsArea {
+        /* background-color: red; */
+        width: 860px;
+    }
+    .BPItemArea {
+        width: 750px;
+    }
+    .bottomBpTaskSection {
+        top: 45rem;
+    }
+    .bottomTaskText {
+        margin-left: 17rem;
+    }
+
+    .bottomTextRectangle {
+        margin-left: 1rem;
+        width: 71%;
+    }
+    .bottomTaskItemList {
+        /* background-color: red; */
+        width: 99rem;
+    }
+    .bottomTaskItem {
+        width: 380px;
+    }
+    .battlePassNotPremiumItemBlur {
+        /* background-color: red; */
+        width: 49rem;
+    }
+    .buyPremiumButton {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 1024px) {
+    .topText {
+        font-size: 30px;
+    }
+    .rectangleTop {
+        width: 66rem;
+    }
+    .leftImageSection {
+        width: 454px;
+        height: 652px;
+        left: -3rem;
+    }
+    .middleAndRightArea {
+        width: 1180px;
+        /* background-color: red; */
+        left: 24rem;
+        top: 10rem;
+        height: 500px;
+    }
+    .levelTextSection {
+        width: 785px;
+    }
+    .levelExperienceSection {
+        width: 785px;
+    }
+    .levelRect {
+        width: 715px;
+    }
+    .battlePassItemsArea {
+        /* background-color: red; */
+        width: 760px;
+    }
+    .BPItemArea {
+        width: 700px;
+    }
+    .bottomBpTaskSection {
+        top: 45rem;
+    }
+    .bottomTaskText {
+        margin-left: 17rem;
+    }
+
+    .bottomTextRectangle {
+        margin-left: 1rem;
+        width: 71%;
+    }
+    .bottomTaskItemList {
+        /* background-color: red; */
+        width: 96rem;
+    }
+    .bottomTaskItem {
+        width: 366px;
+    }
+    .battlePassNotPremiumItemBlur {
+        /* background-color: red; */
+        width: 46.5rem;
+    }
+    .buyPremiumButton {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+    .topText {
+        font-size: 30px;
+    }
+    .rectangleTop {
+        width: 66rem;
+    }
+    .leftImageSection {
+        width: 454px;
+        height: 535px;
+        left: -3rem;
+        top: 7rem;
+    }
+    .middleAndRightArea {
+        width: 1180px;
+        left: 24rem;
+        top: 7rem;
+        height: 500px;
+    }
+    .levelTextSection {
+        width: 785px;
+    }
+    .levelExperienceSection {
+        width: 785px;
+    }
+    .levelRect {
+        width: 715px;
+    }
+    .battlePassItemsArea {
+        width: 760px;
+    }
+    .BPItemArea {
+        width: 700px;
+    }
+    .bottomBpTaskSection {
+        top: 38rem;
+    }
+    .bottomTaskText {
+        margin-left: 17rem;
+    }
+
+    .bottomTextRectangle {
+        margin-left: 1rem;
+        width: 71%;
+    }
+    .bottomTaskItemList {
+        width: 96rem;
+    }
+    .bottomTaskItem {
+        width: 366px;
+    }
+    .battlePassNotPremiumItemBlur {
+        /* background-color: red; */
+        width: 46.5rem;
+    }
+    .buyPremiumButton {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    .topText {
+        font-size: 30px;
+    }
+    .rectangleTop {
+        width: 54.5rem;
+    }
+    .leftImageSection {
+        top: 6rem;
+        width: 454px;
+        height: 555px;
+        left: -3rem;
+    }
+    .middleAndRightArea {
+        width: 1180px;
+        /* background-color: red; */
+        left: 24rem;
+        top: 7rem;
+        height: 500px;
+    }
+    .levelTextSection {
+        width: 615px;
+    }
+    .levelExperienceSection {
+        width: 615px;
+    }
+    .levelRect {
+        width: 545px;
+    }
+    .battlePassItemsArea {
+        /* background-color: red; */
+        width: 760px;
+    }
+    .BPItemArea {
+        width: 535px;
+    }
+    .bottomBpTaskSection {
+        top: 38rem;
+    }
+    .bottomTaskText {
+        margin-left: 17rem;
+    }
+
+    .bottomTextRectangle {
+        margin-left: 1rem;
+        width: 67%;
+    }
+    .bottomTaskItemList {
+        /* background-color: red; */
+        width: 86rem;
+    }
+    .bottomTaskItem {
+        width: 325px;
+    }
+    .battlePassNotPremiumItemBlur {
+        width: 35.5rem;
+    }
+    .buyPremiumButton {
+        margin-top: 12%;
+    }
+}
+
+.collectedSection {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 986;
+}
+
+.collectedPrizeArea {
+    /* visibility: hidden; */
+    /* opacity: 0;
+    transition: opacity 0.3s linear; */
+    position: absolute;
+    z-index: 987;
+    box-shadow: 0px 0px 35px rgba(255, 138, 138, 0.22);
+    background: linear-gradient(180deg, rgba(92, 159, 236, 0.7), rgba(153, 78, 43, 0.342)) padding-box,
+        linear-gradient(to top, rgba(99, 88, 225, 0.2), rgba(78, 227, 235, 0.3)) border-box;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    border: 1px solid rgba(92, 188, 236, 0.7);
+    width: 300px;
+    height: 260px;
+    top: 50%;
+    left: 50%;
+    margin-left: -130px;
+    margin-top: -160px;
+}
+
+.collectedPrizeTop {
+    /* background-color: red; */
+    /* width: 1rem; */
+    height: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #ffffff;
+    /* text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.5); */
+    font-family: Zabal Bold;
+    font-size: 20px;
+}
+
+.collectedPrizeTop span {
+    text-shadow: 0px 0px 9px rgba(250, 199, 60, 0.5);
+    color: #f8ca48;
+    font-family: Zabal;
+}
+
+.collectedItemImageArea {
+    margin-top: 0.7rem;
+    /* background-color: red; */
+    height: 8rem;
+}
+
+.collectedItemImageArea img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+}
+
+.collectedPrizeCount {
+    margin-top: 0.7rem;
+    text-align: center;
+    line-height: 3rem;
+    font-family: Acrom;
+    color: #f8ca48;
+
+    text-shadow: 0px 0px 9px rgba(250, 199, 60, 0.5);
+    /* background-color: red; */
+    height: 2rem;
+}
+
+.yourAccountUpgradedGeneral {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9878976;
+}
+
+.upgradedNotifArea {
+    box-shadow: 0px 0px 35px rgba(138, 200, 255, 0.301);
+    position: absolute;
+    background: linear-gradient(0deg, rgba(220, 56, 56, 0.142) -11.39%, rgba(192, 76, 76, 0.193) 79.17%), rgba(177, 82, 82, 0.18);
+    backdrop-filter: blur(10px);
+    border: 1px solid BLUE;
+    border-radius: 15px;
+    min-height: 75px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -50px;
+}
+
+.upgradeTopArea {
+    /* background-color: red; */
+    height: 2rem;
+    margin-top: 0.5rem;
+    color: #f8e948;
+    text-shadow: 0px 0px 19px rgba(251, 255, 0, 0.34);
+    text-align: center;
+    text-shadow: 0px 0px 9px rgba(255, 255, 255, 0.5);
+    font-family: Acrom;
+    font-size: 25px;
+}
+
+.upgradeNotifMiddle {
+    text-align: center;
+    line-height: 1.5rem;
+    /* color: #8aafff; */
+    color: white;
+    font-family: Zabal;
+    /* background-color: red; */
+    min-height: 2rem;
+}
+
+.prestigeDisplay {
+    color: #f8ca48; /* Matching the gold color used elsewhere */
+    font-size: 16px; /* Same size, adjust as needed */
+    text-align: right; /* Aligning text to the right */
+    padding-right: 20px; /* Padding from the right edge */
+    font-family: 'Zabal Bold', sans-serif; /* Consistent font family */
+    text-shadow: 0px 0px 8px rgba(248, 202, 72, 0.8); /* Subtle glow for better readability */
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+
+.prestigeButtonContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prestigeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgba(248, 202, 72, 0.05); /* Green background */
+    border: rgba(248, 202, 72, 0.8) 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prestigeButton:hover {
+    /* background-color: rgba(248, 202, 72, 0.05); Green background */
+    border: rgba(247, 206, 93, 0.8) 1px solid;
+    text-shadow: 0px 0px 8px rgba(248, 202, 72, 0.8); /* Subtle glow for better readability */
+}
+
+.prestigeButton:active {
+    /* background-color: #397d39; Even darker green when clicked */
+    border: rgba(247, 208, 100, 0.8) 1px solid;
+    text-shadow: 0px 0px 8px rgba(248, 202, 72, 0.8); /* Subtle glow for better readability */
+}
