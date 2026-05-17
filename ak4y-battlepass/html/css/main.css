@@ -482,14 +482,53 @@ body {
     width: 30%;
 }
 
+.bpRowLabel {
+    position: absolute;
+    left: 150px;
+    font-family: Acrom;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c7c7c7;
+}
+
+.standardRowLabel {
+    top: 12.7rem;
+}
+
+.premiumRowLabel {
+    top: 21.2rem;
+    color: #f8ca48;
+    text-shadow: 0px 0px 8px rgba(248, 202, 72, 0.5);
+}
+
+.premiumBattlePassItemsArea {
+    position: absolute;
+    left: -9rem;
+    top: 21.8rem;
+    width: 1650px;
+    height: 10rem;
+}
+
+.BPPremiumItemArea {
+    margin-left: 75px;
+    display: flex;
+    width: 1375px;
+    height: 10rem;
+    overflow-x: auto;
+}
+
 .battlePassNotPremiumItemBlur {
     position: absolute;
-    top: 17rem;
-    left: 28.15rem;
+    top: 21rem;
+    left: -9rem;
     z-index: 90;
-    width: 54.5rem;
-    height: 190px;
-    backdrop-filter: blur(2px);
+    width: 1650px;
+    height: 145px;
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .battlePasNotPremiumTaskBlur {
@@ -682,12 +721,11 @@ body {
     border-radius: 10px;
     border: 1px solid transparent;
     width: 150px;
-    border-radius: 10px;
-    height: 150px;
+    height: 120px;
 }
 
 .itemCollectedTextStandart {
-    line-height: 155px;
+    line-height: 120px;
     text-align: center;
     font-size: 12px;
     font-family: Zabal Bold;
@@ -696,7 +734,7 @@ body {
 }
 
 .itemCollectedTextPremiumx {
-    line-height: 182px;
+    line-height: 120px;
     text-align: center;
     font-size: 12px;
     font-family: Zabal Bold;
@@ -715,14 +753,12 @@ body {
 .bpItemBoxPremium {
     position: relative;
     margin-top: 0.5rem;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.52)) padding-box,
-        linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) border-box;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(248, 202, 72, 0.08)) padding-box,
+        linear-gradient(to top, rgba(248, 202, 72, 0.25), rgba(255, 255, 255, 0)) border-box;
     border-radius: 10px;
     border: 1px solid transparent;
     width: 150px;
-    border-radius: 10px;
-
-    height: 177px;
+    height: 120px;
 }
 
 .bpItemBoxPremium.canTake {
@@ -752,10 +788,9 @@ body {
 }
 
 .BPItemImageSection {
-    /* background-color: rgba(255, 0, 0, 0.113); */
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     width: 100px;
-    height: 75px;
+    height: 55px;
     margin-left: 1.4rem;
 }
 
@@ -778,23 +813,21 @@ body {
     text-shadow: 0px 0px 8px rgba(243, 180, 70, 0.78);
 }
 
-/* ! PREMÄ°UM */
+/* ! PREMIUM */
 .BPItemItemNamePremium {
-    /* background-color: RED; */
     text-align: center;
     font-size: 12px;
-    color: #cbcbcb;
+    color: #f8ca48;
     letter-spacing: 0.035em;
     text-transform: uppercase;
     font-family: Acrom;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .BPItemImageSectionPremium {
-    /* background-color: rgba(255, 0, 0, 0.113); */
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     width: 100px;
-    height: 75px;
+    height: 55px;
     margin-left: 1.4rem;
 }
 
@@ -806,10 +839,10 @@ body {
 
 .BPItemPricePremium {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     font-family: Zabal;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(248, 202, 72, 0.75);
 }
 
 #BPPricePremiumOK {
@@ -841,12 +874,11 @@ body {
 
 .bottomBpTaskSection {
     z-index: 1;
-    /* background-color: rgba(255, 0, 0, 0.05); */
     height: 17rem;
     width: 95%;
     margin-left: 3%;
     position: absolute;
-    top: 47rem;
+    top: 50rem;
 }
 
 .bottomTaskTextArea {
@@ -1419,7 +1451,6 @@ body {
     }
     .middleAndRightArea {
         width: 924px;
-        /* background-color: red; */
         left: 24rem;
         top: 10rem;
         height: 500px;
@@ -1434,36 +1465,38 @@ body {
         width: 760px;
     }
     .battlePassItemsArea {
-        /* background-color: red; */
         width: 860px;
     }
     .BPItemArea {
         width: 750px;
     }
+    .premiumBattlePassItemsArea {
+        width: 860px;
+    }
+    .BPPremiumItemArea {
+        width: 750px;
+    }
     .bottomBpTaskSection {
-        top: 45rem;
+        top: 48rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
     }
-
     .bottomTextRectangle {
         margin-left: 1rem;
         width: 71%;
     }
     .bottomTaskItemList {
-        /* background-color: red; */
         width: 99rem;
     }
     .bottomTaskItem {
         width: 380px;
     }
     .battlePassNotPremiumItemBlur {
-        /* background-color: red; */
-        width: 49rem;
+        width: 860px;
     }
     .buyPremiumButton {
-        margin-top: 10%;
+        margin-top: 0;
     }
 }
 
@@ -1481,7 +1514,6 @@ body {
     }
     .middleAndRightArea {
         width: 1180px;
-        /* background-color: red; */
         left: 24rem;
         top: 10rem;
         height: 500px;
@@ -1496,36 +1528,38 @@ body {
         width: 715px;
     }
     .battlePassItemsArea {
-        /* background-color: red; */
         width: 760px;
     }
     .BPItemArea {
         width: 700px;
     }
+    .premiumBattlePassItemsArea {
+        width: 760px;
+    }
+    .BPPremiumItemArea {
+        width: 700px;
+    }
     .bottomBpTaskSection {
-        top: 45rem;
+        top: 48rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
     }
-
     .bottomTextRectangle {
         margin-left: 1rem;
         width: 71%;
     }
     .bottomTaskItemList {
-        /* background-color: red; */
         width: 96rem;
     }
     .bottomTaskItem {
         width: 366px;
     }
     .battlePassNotPremiumItemBlur {
-        /* background-color: red; */
-        width: 46.5rem;
+        width: 760px;
     }
     .buyPremiumButton {
-        margin-top: 10%;
+        margin-top: 0;
     }
 }
 
@@ -1563,13 +1597,18 @@ body {
     .BPItemArea {
         width: 700px;
     }
+    .premiumBattlePassItemsArea {
+        width: 760px;
+    }
+    .BPPremiumItemArea {
+        width: 700px;
+    }
     .bottomBpTaskSection {
-        top: 38rem;
+        top: 41rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
     }
-
     .bottomTextRectangle {
         margin-left: 1rem;
         width: 71%;
@@ -1581,11 +1620,10 @@ body {
         width: 366px;
     }
     .battlePassNotPremiumItemBlur {
-        /* background-color: red; */
-        width: 46.5rem;
+        width: 760px;
     }
     .buyPremiumButton {
-        margin-top: 10%;
+        margin-top: 0;
     }
 }
 
@@ -1604,7 +1642,6 @@ body {
     }
     .middleAndRightArea {
         width: 1180px;
-        /* background-color: red; */
         left: 24rem;
         top: 7rem;
         height: 500px;
@@ -1619,35 +1656,38 @@ body {
         width: 545px;
     }
     .battlePassItemsArea {
-        /* background-color: red; */
         width: 760px;
     }
     .BPItemArea {
         width: 535px;
     }
+    .premiumBattlePassItemsArea {
+        width: 760px;
+    }
+    .BPPremiumItemArea {
+        width: 535px;
+    }
     .bottomBpTaskSection {
-        top: 38rem;
+        top: 41rem;
     }
     .bottomTaskText {
         margin-left: 17rem;
     }
-
     .bottomTextRectangle {
         margin-left: 1rem;
         width: 67%;
     }
     .bottomTaskItemList {
-        /* background-color: red; */
         width: 86rem;
     }
     .bottomTaskItem {
         width: 325px;
     }
     .battlePassNotPremiumItemBlur {
-        width: 35.5rem;
+        width: 760px;
     }
     .buyPremiumButton {
-        margin-top: 12%;
+        margin-top: 0;
     }
 }
 
