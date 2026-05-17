@@ -234,130 +234,97 @@ window.addEventListener("message", (event) => {
 });
 
 function setBattlePassItems(data, playerDetails) {
-    $(".BPItemArea").empty();
-    var recentEvent = $(".BPItemArea").html();
-    for (let i = 0; i < data.length; i++) {
-        const element = data[i];
-        var standartStringify = JSON.stringify(element.rewards.standart);
-        // var premiumStringify = JSON.stringify(element.rewards.premium);
-        var standartItemDetails = JSON.parse(standartStringify);
-        // var premiumItemDetails = JSON.parse(premiumStringify);
-        var standartItemCount = standartItemDetails.type === "money" ? dolarSymbol + standartItemDetails.count : standartItemDetails.count + piece;
-        // var premiumItemCount = premiumItemDetails.type === "money" ? dolarSymbol + premiumItemDetails.count : premiumItemDetails.count + piece;
-        var levelIsOkayFORLevelTextSTANDART = "";
-        var levelIsOkayForStandartBoxSTANDART = "";
-        var levelIsOkayForCountSTANDART = "";
-        // var levelIsOkayForStandartBoxPREMIUM = "";
-        // var levelIsOkayForCountPREMIUM = "";
-        var addClass = "";
-        if (element.requiredLevel <= currentLevel) {
-            levelIsOkayFORLevelTextSTANDART = "bpItemLevelOK";
-            levelIsOkayForStandartBoxSTANDART = "levelOkayStandart";
-            levelIsOkayForCountSTANDART = "BPPriceStandartOK";
-            // levelIsOkayForStandartBoxPREMIUM = "levelOkayPremium";
-            // levelIsOkayForCountPREMIUM = "BPPricePremiumOK";
-            addClass = " canTake";
+    var parsedRewards = typeof playerDetails === "string" ? JSON.parse(playerDetails) : playerDetails;
+    var stdHtml = "";
+    var premHtml = "";
+
+    for (var i = 0; i < data.length; i++) {
+        var element = data[i];
+        var stdDetails = element.rewards.standart;
+        var premDetails = element.rewards.premium || null;
+        var playerRew = parsedRewards[i];
+        var stdReward = playerRew.rewards.standart;
+        var premReward = playerRew.rewards.premium || null;
+
+        var levelOk = element.requiredLevel <= currentLevel;
+        var lvlId   = levelOk ? "bpItemLevelOK"    : "";
+        var stdId   = levelOk ? "levelOkayStandart" : "";
+        var stdCntId= levelOk ? "BPPriceStandartOK" : "";
+
+        var stdCount = stdDetails.type === "money"
+            ? dolarSymbol + stdDetails.count
+            : stdDetails.count + piece;
+
+        // ── Standard cell ──────────────────────────────────────────
+        stdHtml += `<div class="bpLevelItem">
+            <div class="BPItemLevelArea">
+                <div class="bplevelrect"></div>
+                <div class="bpItemLevel" id="${lvlId}">${element.requiredLevel} LVL</div>
+                <div class="bplevelrect"></div>
+            </div>`;
+
+        if (stdReward.taken) {
+            stdHtml += `<div class="bpItemBoxStandart" id="${stdId}">
+                <div class="itemCollectedTextStandart">${collectedText}</div>
+            </div>`;
+        } else {
+            var stdCanTake = levelOk ? " canTake" : "";
+            stdHtml += `<div class="bpItemBoxStandart${stdCanTake}" id="${stdId}"
+                data-taskId="${element.taskId}"
+                data-reqLevel="${element.requiredLevel}"
+                data-rewardDetails='${JSON.stringify(stdDetails)}'>
+                <div class="BPItemItemName">${stdDetails.itemLabel}</div>
+                <div class="BPItemImageSection"><img src="${stdDetails.image}" alt="" /></div>
+                <div class="BPItemPrice" id="${stdCntId}">${stdCount}</div>
+            </div>`;
         }
-        var playerDetRewGeneral = JSON.parse(playerDetails)[i];
-        var currentStandartReward = playerDetRewGeneral.rewards.standart;
-        // var currentPremiumReward = playerDetRewGeneral.rewards.premium;
-        // console.log(JSON.stringify(standartItemDetails), typeof JSON.stringify(standartItemDetails));
-        if (!currentStandartReward.taken) {
-            recentEvent =
-                recentEvent +
-                `
-            <div class="bpLevelItem">
+        stdHtml += `</div>`;
+
+        // ── Premium cell ────────────────────────────────────────────
+        if (premDetails) {
+            var premCount = premDetails.type === "money"
+                ? dolarSymbol + premDetails.count
+                : premDetails.count + piece;
+            var premId    = levelOk ? "levelOkayPremium"  : "";
+            var premCntId = levelOk ? "BPPricePremiumOK"  : "";
+            var premCanTake = (levelOk && userPremium && !(premReward && premReward.taken)) ? " canTake" : "";
+
+            premHtml += `<div class="bpLevelItem">
                 <div class="BPItemLevelArea">
                     <div class="bplevelrect"></div>
-                    <div class="bpItemLevel" id=${levelIsOkayFORLevelTextSTANDART}>${element.requiredLevel} LVL</div>
+                    <div class="bpItemLevel" id="${lvlId}">${element.requiredLevel} LVL</div>
                     <div class="bplevelrect"></div>
-                </div>
-                <div class="bpItemRewardBoxes">
-    
-                    <div class="bpItemBoxStandart${addClass}" id=${levelIsOkayForStandartBoxSTANDART} data-taskId = "${
-                    element.taskId
-                }" data-reqLevel = "${element.requiredLevel}" data-rewardDetails = '${JSON.stringify(standartItemDetails)}'>
-                        <div class="BPItemItemName">${standartItemDetails.itemLabel}</div>
-                        <div class="BPItemImageSection">
-                            <img src=${standartItemDetails.image} alt="" />
-                        </div>
-                        <div class="BPItemPrice" id=${levelIsOkayForCountSTANDART}>${standartItemCount}</div>
-                    </div>
+                </div>`;
 
-
-                </div>
-            </div>
-            `;
-        } else if (currentStandartReward.taken.taken) {
-            recentEvent =
-                recentEvent +
-                `
-            <div class="bpLevelItem">
+            if (premReward && premReward.taken) {
+                premHtml += `<div class="bpItemBoxPremium" id="${premId}">
+                    <div class="itemCollectedTextStandart">${collectedText}</div>
+                </div>`;
+            } else {
+                premHtml += `<div class="bpItemBoxPremium${premCanTake}" id="${premId}"
+                    data-taskId="${element.taskId}"
+                    data-reqLevel="${element.requiredLevel}"
+                    data-rewardDetails='${JSON.stringify(premDetails)}'>
+                    <div class="BPItemItemNamePremium">${premDetails.itemLabel}</div>
+                    <div class="BPItemImageSectionPremium"><img src="${premDetails.image}" alt="" /></div>
+                    <div class="BPItemPricePremium" id="${premCntId}">${premCount}</div>
+                </div>`;
+            }
+            premHtml += `</div>`;
+        } else {
+            premHtml += `<div class="bpLevelItem">
                 <div class="BPItemLevelArea">
                     <div class="bplevelrect"></div>
-                    <div class="bpItemLevel" id=${levelIsOkayFORLevelTextSTANDART}>${element.requiredLevel} LVL</div>
+                    <div class="bpItemLevel">${element.requiredLevel} LVL</div>
                     <div class="bplevelrect"></div>
                 </div>
-                <div class="bpItemRewardBoxes">
-            
-                    <div class="bpItemBoxStandart" id=${levelIsOkayForStandartBoxSTANDART}>
-                        <div class="itemCollectedTextStandart">${collectedText}</div>
-                    </div>
-
-                   
-            </div>
-        `;
-        } else if (!currentStandartReward.taken) {
-            recentEvent =
-                recentEvent +
-                `
-            <div class="bpLevelItem">
-                <div class="BPItemLevelArea">
-                    <div class="bplevelrect"></div>
-                    <div class="bpItemLevel" id=${levelIsOkayFORLevelTextSTANDART}>${element.requiredLevel} LVL</div>
-                    <div class="bplevelrect"></div>
-                </div>
-                <div class="bpItemRewardBoxes">
-            
-                    <div class="bpItemBoxStandart${addClass}" id=${levelIsOkayForStandartBoxSTANDART} data-taskId = "${
-                    element.taskId
-                }" data-reqLevel = "${element.requiredLevel}" data-rewardDetails = '${JSON.stringify(standartItemDetails)}'>
-                        <div class="BPItemItemName">${standartItemDetails.itemLabel}</div>
-                        <div class="BPItemImageSection">
-                            <img src=${standartItemDetails.image} alt="" />
-                        </div>
-                        <div class="BPItemPrice" id=${levelIsOkayForCountSTANDART}>${standartItemCount}</div>
-                    </div>
-
-                 
-
-                </div>
-            </div>
-        `;
-        } else if (currentStandartReward.taken) {
-            recentEvent =
-                recentEvent +
-                `
-            <div class="bpLevelItem">
-                <div class="BPItemLevelArea">
-                    <div class="bplevelrect"></div>
-                    <div class="bpItemLevel" id=${levelIsOkayFORLevelTextSTANDART}>${element.requiredLevel} LVL</div>
-                    <div class="bplevelrect"></div>
-                </div>
-                <div class="bpItemRewardBoxes">
-            
-                    <div class="bpItemBoxStandart" id=${levelIsOkayForStandartBoxSTANDART}>
-                        <div class="itemCollectedTextStandart">${collectedText}</div>
-                    </div>
-
-                   
-
-                </div>
-            </div>
-        `;
+                <div class="bpItemBoxPremium"></div>
+            </div>`;
         }
     }
-    $(".BPItemArea").html(recentEvent);
+
+    $(".BPItemArea").html(stdHtml);
+    $(".BPPremiumItemArea").html(premHtml);
 }
 
 function setBottomTasks(data, userDetails) {
@@ -462,21 +429,11 @@ $(document).on("keydown", function () {
     }
 });
 
-var elements = document.getElementById("scollItemList");
-// var elements2 = document.getElementById("scollBlur");
-elements.addEventListener("wheel", (event) => {
+var rewardBarsScroll = document.getElementById("rewardBarsScroll");
+rewardBarsScroll.addEventListener("wheel", (event) => {
     event.preventDefault();
-    elements.scrollBy({
-        left: event.deltaY < 0 ? -40 : 40,
-    });
+    rewardBarsScroll.scrollBy({ left: event.deltaY < 0 ? -40 : 40 });
 });
-
-// elements2.addEventListener("wheel", (event) => {
-//     event.preventDefault();
-//     elements.scrollBy({
-//         left: event.deltaY < 0 ? -40 : 40,
-//     });
-// });
 
 $(document).on("click", ".buyPremiumButton", function () {
     inRedeemArea = true;
