@@ -430,15 +430,15 @@ $(document).on("keydown", function () {
 });
 
 var elements = document.getElementById("scollItemList");
+var premiumElements = document.getElementById("premiumItemList");
+
 elements.addEventListener("wheel", (event) => {
     event.preventDefault();
     elements.scrollBy({ left: event.deltaY < 0 ? -40 : 40 });
 });
 
-var premiumElements = document.getElementById("premiumItemList");
-premiumElements.addEventListener("wheel", (event) => {
-    event.preventDefault();
-    premiumElements.scrollBy({ left: event.deltaY < 0 ? -40 : 40 });
+elements.addEventListener("scroll", () => {
+    premiumElements.scrollLeft = elements.scrollLeft;
 });
 
 $(document).on("click", ".buyPremiumButton", function () {
