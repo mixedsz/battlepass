@@ -97,8 +97,12 @@ end
 -- Build a fresh rewards array from config (one entry per BattlePassItems row)
 local function buildDefaultRewards()
     local r = {}
-    for _ in ipairs(AK4Y.BattlePassItems) do
-        r[#r + 1] = { rewards = { standart = { taken = false } } }
+    for _, item in ipairs(AK4Y.BattlePassItems) do
+        local entry = { rewards = { standart = { taken = false } } }
+        if item.rewards.premium then
+            entry.rewards.premium = { taken = false }
+        end
+        r[#r + 1] = entry
     end
     return r
 end
